@@ -71,7 +71,7 @@ btn.addEventListener('click', (e) => {
     if (mail.value.length !== 0) {
     }
     else {
-        eerr.innerText = "**Fill The User Name"
+        eerr.innerText = "**Fill The Email "
     }
     if (pw.value.length !== 0) {
     }
@@ -83,9 +83,12 @@ btn.addEventListener('click', (e) => {
     else {
         cperr.innerText = "**Fill The Confirm PassWord"
     }
-    alert("Submited")
-    user.value = "";
-    mail.value = "";
-    pw.value = "";
-    cpw.value = "";
+    if (user.value.length !== 0 && mail.value.length !== 0 && pw.value.length !== 0 && cpw.value.length !== 0) {
+        alert("Submited")
+        user.value = "";
+         mail.value = "";
+         pw.value = "";
+         cpw.value = "";
+    }
+    
 })
